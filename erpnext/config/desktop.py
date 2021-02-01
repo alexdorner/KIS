@@ -7,7 +7,7 @@ def get_data():
 	return [
 
 
-		# Category: "Domains"
+		Category: "Domains"
 	#KIS Modul
 
 		{
