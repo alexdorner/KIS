@@ -4,7 +4,7 @@ import frappe
 from frappe import _
 from erpnext.setup.utils import insert_record
 
-def setup_healthcare():
+def setup_KIS():
 	if frappe.db.exists('Medical Department', 'Cardiology'):
 		# already setup
 		return
