@@ -166,7 +166,7 @@
    "fieldtype": "Data",
    "label": "Email",
 
-   "read_only": 1,
+   "read_only": 1
   },
 
   {
