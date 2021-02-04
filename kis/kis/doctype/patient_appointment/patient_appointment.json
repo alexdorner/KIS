@@ -8,31 +8,7 @@
  "doctype": "DocType",
  "document_type": "Document",
  "engine": "InnoDB",
- "field_order": [
-  "naming_series",
-  "patient",
-  "patient_mobile",
-  "patient_email",
-
-
-  "column_break_1",
-  "company",
-  "service_unit",
-  "procedure_template",
-  "get_procedure_from_encounter",
-  "procedure_prescription",
-  "practitioner",
-  "practitioner_name",
-  "department",
-  "section_break_12",
-  "appointment_type",
-  "duration",
-  "column_break_17",
-  "appointment_date",
-  "appointment_time",
-  "appointment_datetime",
-  "section_break_16"
- ],
+ 
  "fields": [
 {
    "fieldname": "naming_series",
