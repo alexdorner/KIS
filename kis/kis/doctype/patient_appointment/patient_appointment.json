@@ -9,7 +9,7 @@
  "document_type": "Document",
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
+  
   "title",
   "patient",
   "patient_mobile",
