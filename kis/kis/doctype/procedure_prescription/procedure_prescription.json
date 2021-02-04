@@ -77,11 +77,11 @@
  "links": [],
  "modified": "2020-02-26 15:42:33.988081",
  "modified_by": "Administrator",
- "module": "KIS",
+ "module": "kis",
  "name": "Procedure Prescription",
  "owner": "Administrator",
  "permissions": [],
- "restrict_to_domain": "KIS",
+ "restrict_to_domain": "kis",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1
