@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "beta": 1,
+ "creation": "2017-01-23 14:03:49.084370",
+ "description": "Patient",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_info",
+  "ID",
+
+
+  "mobile",
+  "email"
+
+
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_info",
+   "fieldtype": "Section Break",
+   "label": "Patient Demographics",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-user"
+  },
+
+  {
+   "fieldname": "ID",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-PAT-.YYYY.-",
+   "print_hide": 1,
+   "report_hide": 1,
+   "set_only_once": 1
+  },
+
+  {
+   "bold": 1,
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mobile",
+   "options": "Phone"
+  },
+  {
+   "bold": 1,
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email",
+   "options": "Email"
+  },
+
+
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  }
+
+ ],
+ "icon": "fa fa-user",
+ "image_field": "image",
+ "links": [],
+ "max_attachments": 50,
+ "modified": "2020-04-25 17:24:32.146415",
+ "modified_by": "Administrator",
+ "module": "kis",
+ "name": "Patient",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+
+ ],
+ "quick_entry": 1,
+ "restrict_to_domain": "kis",
+ "search_fields": "ID,mobile,email",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "title_field": "ID",
+ "track_changes": 1
+}
