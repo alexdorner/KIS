@@ -10,7 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   
-  "basic_info"
+  "basic_info",
   "patient",
   "patient_mobile",
   "patient_email",
