@@ -9,8 +9,7 @@
  "document_type": "Document",
  "engine": "InnoDB",
  "field_order": [
-  
-  "basic_info",
+  "naming_series",
   "patient",
   "patient_mobile",
   "patient_email",
@@ -36,11 +35,11 @@
  ],
  "fields": [
 {
-   "fieldname": "basic_info",
-   "fieldtype": "Section Break",
-   "label": "Patient Appointment",
-   "oldfieldtype": "Section Break",
-   "options": "fa fa-user"
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-APP-.YYYY.-",
+   "set_only_once": 1
   },
   
   {
