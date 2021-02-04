@@ -10,7 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   
-  
+  "basic_info"
   "patient",
   "patient_mobile",
   "patient_email",
@@ -35,7 +35,14 @@
   "section_break_16"
  ],
  "fields": [
-
+{
+   "fieldname": "basic_info",
+   "fieldtype": "Section Break",
+   "label": "Patient Appointment",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-user"
+  },
+  
   {
    "fieldname": "patient",
    "fieldtype": "Link",
