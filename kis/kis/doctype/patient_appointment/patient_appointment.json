@@ -1,0 +1,285 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "beta": 1,
+ "creation": "2017-05-04 11:52:40.941507",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "patient",
+  "patient_mobile",
+  "patient_email",
+
+
+  "column_break_1",
+  "company",
+  "service_unit",
+  "procedure_template",
+  "get_procedure_from_encounter",
+  "procedure_prescription",
+  "practitioner",
+  "practitioner_name",
+  "department",
+  "section_break_12",
+  "appointment_type",
+  "duration",
+  "column_break_17",
+  "appointment_date",
+  "appointment_time",
+  "appointment_datetime",
+  "section_break_16"
+ ],
+ "fields": [
+
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1,
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "appointment_type",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Appointment Type",
+   "options": "Appointment Type",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "label": "Duration (In Minutes)",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+
+  {
+   "depends_on": "eval:doc.patient;",
+   "fieldname": "procedure_template",
+   "fieldtype": "Link",
+   "label": "Clinical Procedure Template",
+   "options": "Clinical Procedure Template",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.__islocal && doc.patient",
+   "fieldname": "get_procedure_from_encounter",
+   "fieldtype": "Button",
+   "label": "Get Prescribed Clinical Procedures"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Procedure Prescription",
+   "no_copy": 1,
+   "options": "Procedure Prescription",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_unit",
+   "fieldtype": "Link",
+   "label": "Service Unit",
+   "options": "KIS Service Unit",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Appointment Details"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "KIS Practitioner",
+   "options": "KIS Practitioner",
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Medical Department",
+   "read_only": 1,
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "appointment_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "read_only": 1,
+   "reqd": 1
+  },
+
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "patient_mobile",
+   "fieldtype": "Data",
+   "label": "Patient Mobile",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.email",
+   "fieldname": "patient_email",
+   "fieldtype": "Data",
+   "label": "Email",
+
+   "read_only": 1,
+  },
+
+  {
+   "fieldname": "appointment_datetime",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Appointment Datetime",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1,
+   "search_index": 1
+  },
+
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "no_copy": 1,
+   "options": "Company",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+
+  {
+   "fieldname": "referring_practitioner",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Referring Practitioner",
+   "options": "KIS Practitioner"
+  },
+  {
+   "default": "0",
+   "fieldname": "reminded",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Reminded",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+
+  {
+   "fieldname": "ID",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-APP-.YYYY.-",
+   "set_only_once": 1
+  },
+
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner Name",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-12-16 13:16:58.578503",
+ "modified_by": "Administrator",
+ "module": "kis",
+ "name": "Patient Appointment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KIS Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "kis",
+ "search_fields": "patient, practitioner, department, appointment_date, appointment_time",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "title",
+ "track_changes": 1,
+ "track_seen": 1
+}
