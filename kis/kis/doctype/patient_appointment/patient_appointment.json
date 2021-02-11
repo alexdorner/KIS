@@ -8,34 +8,16 @@
  "doctype": "DocType",
  "document_type": "Document",
  "engine": "InnoDB",
- "field_order": [
-  "naming_series",
-  "title",
-  "patient",
-  "patient_mobile",
-  "patient_email",
-
-
-  "column_break_1",
-  "company",
-  "service_unit",
-  "procedure_template",
-  "get_procedure_from_encounter",
-  "procedure_prescription",
-  "practitioner",
-  "practitioner_name",
-  "department",
-  "section_break_12",
-  "appointment_type",
-  "duration",
-  "column_break_17",
-  "appointment_date",
-  "appointment_time",
-  "appointment_datetime",
-  "section_break_16"
- ],
+ 
  "fields": [
-
+{
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HLC-APP-.YYYY.-",
+   "set_only_once": 1
+  },
+  
   {
    "fieldname": "patient",
    "fieldtype": "Link",
@@ -166,7 +148,7 @@
    "fieldtype": "Data",
    "label": "Email",
 
-   "read_only": 1,
+   "read_only": 1
   },
 
   {

@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 import inspect
 import frappe
-from kis.hooks import regional_overrides
+#from kis.hooks import regional_overrides
 from frappe.utils import getdate
 
 __version__ = '13.0.0-dev'
