@@ -1,6 +1,6 @@
 // Copyright (c) 2016, ESS LLP and contributors
 // For license information, please see license.txt
-frappe.provide('erpnext.queries');
+//frappe.provide('erpnext.queries');
 frappe.ui.form.on('Patient Appointment', {
 	setup: function(frm) {
 		frm.custom_make_buttons = {
@@ -93,31 +93,7 @@ frappe.ui.form.on('Patient Appointment', {
 
 
 
-	get_procedure_from_encounter: function(frm) {
-		get_prescribed_procedure(frm);
-	},
 
-
-
-	get_prescribed_therapies: function(frm) {
-		if (frm.doc.patient) {
-			frappe.call({
-				method: "kis.kis.doctype.patient_appointment.patient_appointment.get_prescribed_therapies",
-				args: {patient: frm.doc.patient},
-				callback: function(r) {
-					if (r.message) {
-						show_therapy_types(frm, r.message);
-					} else {
-						frappe.msgprint({
-							title: __('Not Therapies Prescribed'),
-							message: __('There are no Therapies prescribed for Patient {0}', [frm.doc.patient.bold()]),
-							indicator: 'blue'
-						});
-					}
-				}
-			});
-		}
-	}
 });
 
 let check_and_set_availability = function(frm) {
@@ -387,13 +363,12 @@ frappe.ui.form.on('Patient Appointment', 'practitioner', function(frm) {
 		frappe.call({
 			method: 'frappe.client.get',
 			args: {
-				doctype: 'Healthcare Practitioner',
+				doctype: 'kis Practitioner',
 				name: frm.doc.practitioner
 			},
 			callback: function (data) {
 				frappe.model.set_value(frm.doctype, frm.docname, 'department', data.message.department);
-				frappe.model.set_value(frm.doctype, frm.docname, 'paid_amount', data.message.op_consulting_charge);
-				frappe.model.set_value(frm.doctype, frm.docname, 'billing_item', data.message.op_consulting_charge_item);
+
 			}
 		});
 	}
@@ -406,14 +381,8 @@ frappe.ui.form.on('Patient Appointment', 'patient', function(frm) {
 			args: {
 				doctype: 'Patient',
 				name: frm.doc.patient
-			},
-			callback: function (data) {
-				let age = null;
-				if (data.message.dob) {
-					age = calculate_age(data.message.dob);
-				}
-				frappe.model.set_value(frm.doctype,frm.docname, 'patient_age', age);
 			}
+
 		});
 	}
 });
@@ -433,10 +402,3 @@ frappe.ui.form.on('Patient Appointment', 'appointment_type', function(frm) {
 	}
 });
 
-let calculate_age = function(birth) {
-	let ageMS = Date.parse(Date()) - Date.parse(birth);
-	let age = new Date();
-	age.setTime(ageMS);
-	let years =  age.getFullYear() - 1970;
-	return  years + ' Year(s) ' + age.getMonth() + ' Month(s) ' + age.getDate() + ' Day(s)';
-};
