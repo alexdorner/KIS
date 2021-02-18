@@ -8,7 +8,7 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import cint, cstr, getdate
 import dateutil
-from frappe.model.naming import set_mobile_by_naming_series
+from frappe.model.naming import set_name_by_naming_series
 from frappe.utils.nestedset import get_root_of
 from kis import get_default_currency
 from kis.KIS.doctype.KIS_settings.KIS_settings import get_receivable_account, get_income_account, send_registration_sms
@@ -68,7 +68,7 @@ class Patient(Document):
 		if patient_mobile_by == 'Patient Mobile':
 			self.mobile = self.get_patient_mobile()
 		else:
-			set_mobile_by_naming_series(self)
+			set_name_by_naming_series(self) #es wird trotzdem die nummer gesettet aber der import heißt halt name im framework ...
 
 	def get_patient_mobile(self):
 
