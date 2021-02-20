@@ -9,7 +9,7 @@
  "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
- "field_order": [
+ /*"field_order": [
   "naming_series",
   "title",
   "appointment",
@@ -26,7 +26,9 @@
   "practitioner_name",
   "medical_department"
 
- ],
+ ],*/
+
+
  "fields": [
 
 

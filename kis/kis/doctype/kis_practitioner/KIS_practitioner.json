@@ -8,7 +8,7 @@
  "doctype": "DocType",
  "document_type": "Setup",
  "engine": "InnoDB",
- "field_order": [
+ /*"field_order": [
   "basic_details_section",
   "naming_series",
   "first_name",
@@ -33,7 +33,8 @@
   "address_html",
   "column_break_19",
   "contact_html"
- ],
+ ],*/
+
  "fields": [
   {
    "fieldname": "first_name",

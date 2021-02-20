@@ -8,12 +8,12 @@
  "doctype": "DocType",
  "document_type": "Setup",
  "engine": "InnoDB",
- "field_order": [
+ /*"field_order": [
   "appointment_type",
   "ip",
   "default_duration",
   "color"
- ],
+ ],*/
  "fields": [
   {
    "allow_in_quick_entry": 1,
