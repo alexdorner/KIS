@@ -10,23 +10,7 @@
  "document_type": "Setup",
  "editable_grid": 1,
  "engine": "InnoDB",
- /*"field_order": [
-  "kis_service_unit_name",
-  "is_group",
-  "service_unit_type",
-  "allow_appointments",
-  "overlap_appointments",
 
-  "occupancy_status",
-  "column_break_9",
-  "company",
-  "warehouse",
-  "tree_details_section",
-  "parent_kis_service_unit",
-  "lft",
-  "rgt",
-  "old_parent"
- ],*/
  "fields": [
   {
    "fieldname": "kis_service_unit_name",

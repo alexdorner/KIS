@@ -8,32 +8,7 @@
  "doctype": "DocType",
  "document_type": "Setup",
  "engine": "InnoDB",
- /*"field_order": [
-  "basic_details_section",
-  "naming_series",
-  "first_name",
-  "last_name",
-  "practitioner_name",
-  "gender",
-  "image",
-  "column_break_7",
 
-  "mobile_phone",
-  "department",
-  "column_break_17",
-  "user_id",
-  "hospital",
-  "appointments",
-  "practitioner_schedules",
-
-
-  "column_break_18",
-
-  "address_and_contacts_section",
-  "address_html",
-  "column_break_19",
-  "contact_html"
- ],*/
 
  "fields": [
   {

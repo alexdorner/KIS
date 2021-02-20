@@ -7,20 +7,7 @@
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
- /*"field_order": [
-  "disabled",
-  "service_unit_type",
-  "allow_appointments",
-  "overlap_appointments",
 
-
-  "uom",
-  "no_of_hours",
-  "column_break_11",
-  "rate",
-  "description",
-  "change_in_item"
- ],*/
  "fields": [
   {
    "fieldname": "service_unit_type",

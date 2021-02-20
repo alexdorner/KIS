@@ -9,25 +9,6 @@
  "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
- /*"field_order": [
-  "naming_series",
-  "title",
-  "appointment",
-  "appointment_type",
-  "patient",
-  "patient_mobile",
-  "patient_email",
-
-  "column_break_6",
-  "company",
-  "encounter_date",
-  "encounter_time",
-  "practitioner",
-  "practitioner_name",
-  "medical_department"
-
- ],*/
-
 
  "fields": [
 
