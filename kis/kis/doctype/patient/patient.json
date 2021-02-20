@@ -10,16 +10,7 @@
  "doctype": "DocType",
  "document_type": "Document",
  "engine": "InnoDB",
- "field_order": [
-  "basic_info",
-  "ID",
 
-
-  "mobile",
-  "email"
-
-
- ],
  "fields": [
   {
    "fieldname": "basic_info",
