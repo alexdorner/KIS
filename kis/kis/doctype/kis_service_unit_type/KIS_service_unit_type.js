@@ -1,6 +1,6 @@
 // Copyright (c) 2018, Frappe Technologies Pvt. Ltd. and contributors
 // For license information, please see license.txt
-
+/*
 frappe.ui.form.on('kis Service Unit Type', {
 	refresh: function(frm) {
 		frm.set_df_property('item_code', 'read_only', frm.doc.__islocal ? 0 : 1);
@@ -84,3 +84,4 @@ let change_item_code = function(frm, doc) {
 		'Item Code': frm.doc.item_code
 	});
 };
+*/

@@ -5,8 +5,7 @@
  "allow_rename": 1,
  "autoname": "naming_series:",
  "beta": 1,
- "creation": "2017-01-23 14:03:49.084370",
- "description": "Patient",
+
  "doctype": "DocType",
  "document_type": "Document",
  "engine": "InnoDB",
@@ -60,12 +59,11 @@
  "image_field": "image",
  "links": [],
  "max_attachments": 50,
- "modified": "2020-04-25 17:24:32.146415",
- "modified_by": "Administrator",
+
  "module": "kis",
  "name": "Patient",
  "name_case": "Title Case",
- "owner": "Administrator",
+
  "permissions": [
   {
    "create": 1,
