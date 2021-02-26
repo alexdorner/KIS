@@ -113,21 +113,7 @@
    "reqd": 1
   },
 
-  {
-   "fetch_from": "patient.mobile",
-   "fieldname": "patient_mobile",
-   "fieldtype": "Data",
-   "label": "Patient Mobile",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "patient.email",
-   "fieldname": "patient_email",
-   "fieldtype": "Data",
-   "label": "Email",
 
-   "read_only": 1
-  },
 
   {
    "fieldname": "appointment_datetime",
