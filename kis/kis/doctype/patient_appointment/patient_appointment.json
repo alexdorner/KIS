@@ -157,14 +157,6 @@
    "label": "Reminded",
    "print_hide": 1,
    "report_hide": 1
-  },
-
-  {
-   "fieldname": "ID",
-   "fieldtype": "Select",
-   "label": "Series",
-   "options": "HLC-APP-.YYYY.-",
-   "set_only_once": 1
   }
 
 
