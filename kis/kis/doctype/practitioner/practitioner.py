@@ -6,24 +6,19 @@ from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 from frappe import _
-from kis.accounts.party import validate_party_accounts
+
 from frappe.contacts.address_and_contact import load_address_and_contact, delete_contact_and_address
-from frappe.model.naming import append_number_if_name_exists
+
 
 class KIPractitioner(Document):
 	def onload(self):
 		load_address_and_contact(self)
 
-	def autoname(self):
-		# concat first and last name
-		self.name = self.practitioner_name
 
-		if frappe.db.exists('Practitioner', self.name):
-			self.name = append_number_if_name_exists('Contact', self.name)
 
 	def validate(self):
 		self.set_full_name()
-		validate_party_accounts(self)
+
 
 		if self.user_id:
 			self.validate_user_id()
