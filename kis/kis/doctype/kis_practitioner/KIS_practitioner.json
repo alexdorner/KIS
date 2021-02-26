@@ -13,25 +13,17 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name",
-   "no_copy": 1,
-   "reqd": 1
+   "label": "First Name"
+
   },
 
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name",
-   "no_copy": 1
+   "label": "Last Name"
+
   },
-  {
-   "fieldname": "image",
-   "fieldtype": "Attach Image",
-   "hidden": 1,
-   "label": "Image",
-   "no_copy": 1,
-   "print_hide": 1
-  },
+
 
   {
    "fieldname": "user_id",
@@ -84,28 +76,6 @@
    "fieldtype": "Column Break"
   },
 
-  {
-   "depends_on": "eval: !doc.__islocal",
-   "fieldname": "address_html",
-   "fieldtype": "HTML",
-   "label": "Address HTML",
-   "no_copy": 1,
-   "print_hide": 1,
-   "report_hide": 1
-  },
-  {
-   "fieldname": "column_break_19",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval: !doc.__islocal",
-   "fieldname": "contact_html",
-   "fieldtype": "HTML",
-   "label": "Contact HTML",
-   "no_copy": 1,
-   "print_hide": 1,
-   "report_hide": 1
-  },
 
   {
    "bold": 1,
@@ -127,27 +97,14 @@
    "options": "HLC-PRAC-.YYYY.-",
    "report_hide": 1,
    "set_only_once": 1
-  },
-  {
-   "fieldname": "gender",
-   "fieldtype": "Link",
-   "label": "Gender",
-   "options": "Gender"
-  },
-
-  {
-   "collapsible": 1,
-   "depends_on": "eval: !doc.__islocal",
-   "fieldname": "address_and_contacts_section",
-   "fieldtype": "Section Break",
-   "label": "Address and Contacts"
   }
+
  ],
- "image_field": "image",
+
  "links": [],
 
  "module": "kis",
- "name": "KIS Practitioner",
+ "name": "Practitioner",
  "owner": "Administrator",
  "permissions": [
 
@@ -162,7 +119,7 @@
    "role": "Physician",
    "share": 1,
    "write": 1
-  },
+  }
 
  ],
  "restrict_to_domain": "kis",

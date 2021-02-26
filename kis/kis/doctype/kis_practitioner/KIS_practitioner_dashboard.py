@@ -4,7 +4,7 @@ from frappe import _
 def get_data():
 	return {
 		'heatmap': True,
-		'heatmap_message': _('This is based on transactions against this Healthcare Practitioner.'),
+		'heatmap_message': _('This is based on transactions against this kis Practitioner.'),
 		'fieldname': 'practitioner',
 		'transactions': [
 			{

@@ -5,7 +5,7 @@
  "autoname": "field:kis_service_unit_name",
  "beta": 1,
  "description": "KIS Service Unit",
- "doctype": "Setup",
+ "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
 
@@ -37,7 +37,7 @@
  "links": [],
 
  "module": "kis",
- "name": "KIS Service Unit",
+ "name": "Service Unit",
 
  "permissions": [
 

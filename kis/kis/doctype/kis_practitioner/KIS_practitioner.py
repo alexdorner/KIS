@@ -11,7 +11,7 @@ from frappe.contacts.address_and_contact import load_address_and_contact, delete
 from frappe.model.naming import append_number_if_name_exists
 from frappe.desk.reportview import build_match_conditions, get_filters_cond
 
-class HealthcarePractitioner(Document):
+class KISPractitioner(Document):
 	def onload(self):
 		load_address_and_contact(self)
 
@@ -25,7 +25,7 @@ class HealthcarePractitioner(Document):
 	def validate(self):
 		self.set_full_name()
 		validate_party_accounts(self)
-		i
+
 		if self.user_id:
 			self.validate_user_id()
 		else:
