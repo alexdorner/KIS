@@ -4,7 +4,7 @@
  "allow_import": 1,
  "autoname": "naming_series:",
  "beta": 1,
- "creation": "2017-05-04 11:52:40.941507",
+
  "doctype": "DocType",
  "document_type": "Document",
  "engine": "InnoDB",
@@ -56,15 +56,11 @@
   {
    "fieldname": "service_unit",
    "fieldtype": "Link",
-   "label": "Service Unit",
+   "label": "KIS Service Unit",
    "options": "KIS Service Unit",
    "set_only_once": 1
   },
-  {
-   "fieldname": "section_break_12",
-   "fieldtype": "Section Break",
-   "label": "Appointment Details"
-  },
+
   {
    "fieldname": "practitioner",
    "fieldtype": "Link",
