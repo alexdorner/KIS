@@ -2,12 +2,11 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:kis_service_unit_name",
+ "autoname": "kis_service_unit_name",
  "beta": 1,
  "description": "KIS Service Unit",
  "doctype": "DocType",
- "document_type": "Setup",
- "editable_grid": 1,
+ "document_type": "Document",
  "engine": "InnoDB",
 
  "fields": [
