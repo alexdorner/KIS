@@ -4,7 +4,6 @@
  "allow_rename": 1,
  "autoname": "field:kis_service_unit_name",
  "beta": 1,
- "creation": "2016-09-21 13:48:14.731437",
  "description": "KIS Service Unit",
  "doctype": "DocType",
  "document_type": "Setup",
@@ -34,13 +33,6 @@
    "remember_last_selected_value": 1,
    "reqd": 1,
    "search_index": 1
-  },
-
-  {
-   "collapsible": 1,
-   "fieldname": "tree_details_section",
-   "fieldtype": "Section Break",
-   "label": "Tree Details"
   }
  ],
  "links": [],
