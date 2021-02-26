@@ -4,7 +4,7 @@
  "allow_rename": 1,
  "autoname": "field:schedule_name",
  "beta": 1,
- "creation": "2017-05-03 17:28:03.926787",
+
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -24,23 +24,12 @@
    "fieldtype": "Table",
    "label": "Time Slots",
    "options": "KIS Schedule Time Slot"
-  },
-  {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled",
-   "print_hide": 1
-  },
-  {
-   "fieldname": "schedule_details_section",
-   "fieldtype": "Section Break",
-   "label": "Schedule Details"
   }
+
+
  ],
  "links": [],
- "modified": "2020-09-18 17:26:09.703215",
- "modified_by": "Administrator",
+
  "module": "kis",
  "name": "Practitioner Schedule",
  "owner": "Administrator",

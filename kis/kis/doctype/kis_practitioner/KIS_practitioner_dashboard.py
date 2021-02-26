@@ -10,10 +10,8 @@ def get_data():
 			{
 				'label': _('Appointments and Patient Encounters'),
 				'items': ['Patient Appointment', 'Patient Encounter']
-			},
-			{
-				'label': _('Consultation'),
-				'items': ['Clinical Procedure']
 			}
 		]
+
 	}
+

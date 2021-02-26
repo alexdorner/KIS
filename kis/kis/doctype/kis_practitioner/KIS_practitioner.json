@@ -55,9 +55,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "hospital",
+   "fieldname": "company",
    "fieldtype": "Data",
-   "label": "Hospital"
+   "label": "Company"
   },
   {
    "fieldname": "mobile_phone",
@@ -146,8 +146,7 @@
  ],
  "image_field": "image",
  "links": [],
- "modified": "2020-04-06 13:44:24.759623",
- "modified_by": "Administrator",
+
  "module": "kis",
  "name": "KIS Practitioner",
  "owner": "Administrator",

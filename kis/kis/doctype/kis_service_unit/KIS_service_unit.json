@@ -21,24 +21,7 @@
    "reqd": 1,
    "unique": 1
   },
-  {
-   "bold": 1,
-   "fieldname": "parent_kis_service_unit",
-   "fieldtype": "Link",
-   "ignore_user_permissions": 1,
-   "in_list_view": 1,
-   "label": "Parent Service Unit",
-   "options": "KIS Service Unit"
-  },
 
-  {
-   "bold": 1,
-   "depends_on": "eval:doc.is_group != 1",
-   "fieldname": "service_unit_type",
-   "fieldtype": "Link",
-   "label": "Service Unit Type",
-   "options": "KIS Service Unit Type"
-  },
 
   {
    "fieldname": "company",
@@ -53,17 +36,6 @@
    "search_index": 1
   },
 
-  {
-   "fieldname": "old_parent",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "ignore_user_permissions": 1,
-   "label": "Old Parent",
-   "no_copy": 1,
-   "options": "KIS Service Unit",
-   "print_hide": 1,
-   "report_hide": 1
-  },
   {
    "collapsible": 1,
    "fieldname": "tree_details_section",

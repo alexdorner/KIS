@@ -51,30 +51,8 @@
    "read_only": 1
   },
 
-  {
-   "depends_on": "eval:doc.patient;",
-   "fieldname": "procedure_template",
-   "fieldtype": "Link",
-   "label": "Clinical Procedure Template",
-   "options": "Clinical Procedure Template",
-   "set_only_once": 1
-  },
-  {
-   "depends_on": "eval:doc.__islocal && doc.patient",
-   "fieldname": "get_procedure_from_encounter",
-   "fieldtype": "Button",
-   "label": "Get Prescribed Clinical Procedures"
-  },
-  {
-   "fieldname": "procedure_prescription",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Procedure Prescription",
-   "no_copy": 1,
-   "options": "Procedure Prescription",
-   "print_hide": 1,
-   "read_only": 1
-  },
+
+
   {
    "fieldname": "service_unit",
    "fieldtype": "Link",
@@ -225,8 +203,7 @@
   }
  ],
  "links": [],
- "modified": "2020-12-16 13:16:58.578503",
- "modified_by": "Administrator",
+
  "module": "kis",
  "name": "Patient Appointment",
  "owner": "Administrator",
