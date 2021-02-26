@@ -58,7 +58,8 @@
    "fieldtype": "Link",
    "label": "KIS Service Unit",
    "options": "KIS Service Unit",
-   "set_only_once": 1
+   "set_only_once": 1,
+    "reqd": 1
   },
 
   {
@@ -69,7 +70,7 @@
    "label": "KIS Practitioner",
    "options": "KIS Practitioner",
    "read_only": 1,
-   "reqd": 1,
+
    "search_index": 1,
    "set_only_once": 1
   },
@@ -83,6 +84,7 @@
    "label": "Department",
    "options": "Medical Department",
    "read_only": 1,
+    "reqd": 1,
    "search_index": 1,
    "set_only_once": 1
   },
