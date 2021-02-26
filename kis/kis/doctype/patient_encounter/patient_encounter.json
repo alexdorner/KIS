@@ -4,7 +4,7 @@
  "allow_import": 1,
  "autoname": "naming_series:",
  "beta": 1,
- "creation": "2016-04-21 10:53:44.637684",
+
  "doctype": "DocType",
  "document_type": "Document",
  "editable_grid": 1,
@@ -67,8 +67,8 @@
    "fieldname": "practitioner",
    "fieldtype": "Link",
    "in_standard_filter": 1,
-   "label": "KIS Practitioner",
-   "options": "KIS Practitioner",
+   "label": "Practitioner",
+   "options": "Practitioner",
    "reqd": 1
   },
   {
@@ -143,8 +143,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2020-05-16 21:00:08.644531",
- "modified_by": "Administrator",
+
  "module": "kis",
  "name": "Patient Encounter",
  "owner": "Administrator",

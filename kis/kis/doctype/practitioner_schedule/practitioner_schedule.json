@@ -23,7 +23,7 @@
    "fieldname": "time_slots",
    "fieldtype": "Table",
    "label": "Time Slots",
-   "options": "KIS Schedule Time Slot"
+   "options": "Schedule Time Slot"
   }
 
 

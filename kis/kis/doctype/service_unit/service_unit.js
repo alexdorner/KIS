@@ -1,7 +1,7 @@
 // Copyright (c) 2018, Frappe Technologies Pvt. Ltd. and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('KIS Service Unit', {
+frappe.ui.form.on('Service Unit', {
 /*	onload: function(frm) {
 		frm.list_route = 'Tree/kis Service Unit';
 

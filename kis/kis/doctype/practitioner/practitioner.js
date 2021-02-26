@@ -1,7 +1,7 @@
 // Copyright (c) 2016, ESS LLP and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('KIS Practitioner', {
+frappe.ui.form.on('Practitioner', {
 	setup: function(frm) {
 		frm.set_query('account', 'accounts', function(doc, cdt, cdn) {
 			let d = locals[cdt][cdn];
@@ -15,7 +15,7 @@ frappe.ui.form.on('KIS Practitioner', {
 		});
 	},
 	refresh: function(frm) {
-		frappe.dynamic_link = {doc: frm.doc, fieldname: 'name', doctype: 'KIS Practitioner'};
+		frappe.dynamic_link = {doc: frm.doc, fieldname: 'name', doctype: 'Practitioner'};
 
 		if (!frm.is_new()) {
 			frappe.contacts.render_address_and_contact(frm);

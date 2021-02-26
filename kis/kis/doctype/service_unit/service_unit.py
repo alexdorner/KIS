@@ -8,7 +8,7 @@ import frappe
 from frappe.model.document import Document
 
 
-class KISServiceUnit(Document):
+class ServiceUnit(Document):
 
 	pass
 

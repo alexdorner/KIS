@@ -71,25 +71,18 @@ frappe.ui.form.on('Patient Appointment', {
 				check_and_set_availability(frm);
 			});
 
-			if (frm.doc.procedure_template) {
-				frm.add_custom_button(__('Clinical Procedure'), function () {
-					frappe.model.open_mapped_doc({
-						method: 'kis.kis.doctype.clinical_procedure.clinical_procedure.make_procedure',
-						frm: frm,
-					});
-				}, __('Create'));
 
-			} else {
-				frm.add_custom_button(__('Patient Encounter'), function () {
-					frappe.model.open_mapped_doc({
-						method: 'kis.kis.doctype.patient_appointment.patient_appointment.make_encounter',
-						frm: frm,
-					});
-				}, __('Create'));
-			}
-
+			frm.add_custom_button(__('Patient Encounter'), function () {
+				frappe.model.open_mapped_doc({
+					method: 'kis.kis.doctype.patient_appointment.patient_appointment.make_encounter',
+					frm: frm,
+				});
+			}, __('Create'));
 		}
-	},
+
+
+	}
+
 
 
 
