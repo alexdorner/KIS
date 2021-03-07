@@ -41,32 +41,16 @@
  "hide_custom": 0,
  "idx": 0,
  "is_standard": 1,
- "label": "KIS",
+ "label": "kis",
 
- "module": "KIS",
- "name": "KIS",
- "onboarding": "KIS",
+ "module": "kis",
+ "name": "kis",
+ "onboarding": "kis",
  "pin_to_bottom": 0,
  "pin_to_top": 0,
- "restrict_to_domain": "KIS",
+ "restrict_to_domain": "kis",
  "shortcuts": [
-  {
-   "color": "#ffe8cd",
-   "format": "{} Open",
-   "label": "Patient Appointment",
-   "link_to": "Patient Appointment",
-   "stats_filter": "{\n    \"status\": \"Open\",\n    \"company\": [\"like\", '%' + frappe.defaults.get_global_default(\"company\") + '%']\n}",
-   "type": "DocType"
-  },
 
-  {
-   "color": "#cef6d1",
-   "format": "{} Vacant",
-   "label": "Service Unit",
-   "link_to": "KIS Service Unit",
-   "stats_filter": "{\n    \"occupancy_status\": \"Vacant\",\n    \"is_group\": 0,\n    \"company\": [\"like\", \"%\" + frappe.defaults.get_global_default(\"company\") + \"%\"]\n}",
-   "type": "DocType"
-  },
   {
    "label": "Practitioner",
    "link_to": "Practitioner",

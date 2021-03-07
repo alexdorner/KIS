@@ -6,19 +6,22 @@ from __future__ import unicode_literals
 import frappe
 from frappe import _
 from frappe.model.document import Document
-
+from frappe.utils import cint, cstr, getdate
 
 class Patient(Document):
 	def validate(self):
 		self.set_mobile()
 
 
+
+
+
+
 	def automobile(self):
 		patient_mobile_by = frappe.db.get_single_value('kis Settings', 'patient_mobile_by')
 		if patient_mobile_by == 'Patient Mobile':
 			self.mobile = self.get_patient_mobile()
-		#else:
-		#	set_name_by_naming_series(self) #es wird trotzdem die nummer gesettet aber der import heißt halt name im framework ...
+
 
 	def get_patient_mobile(self):
 
@@ -30,6 +33,9 @@ class Patient(Document):
 			return "{0} - {1}".format(mobile, cstr(count))
 
 		return mobile
+
+
+
 
 
 @frappe.whitelist()
