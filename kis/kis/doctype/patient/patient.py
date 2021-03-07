@@ -11,18 +11,18 @@ from frappe.utils import cint, cstr, getdate
 class Patient(Document):
 	def validate(self):
 		self.set_mobile()
-		self.add_as_website_user()
 
-	def before_insert(self):
-		self.set_missing_customer_details()
+
+	#def before_insert(self):
+		#self.set_missing_customer_details()
 
 	def after_insert(self):
-		self.add_as_website_user()
+		#self.add_as_website_user()
 		self.reload()
 		if frappe.db.get_single_value('kis Settings', 'link_customer_to_patient') and not self.customer:
 			create_customer(self)
 		if frappe.db.get_single_value('kis Settings', 'collect_registration_fee'):
-			frappe.db.set_value('Patient', self.mobile, 'status', 'Disabled')
+			frappe.db.set_value('Patient', self.mobile)
 
 		self.reload() # self.notify_update()
 
