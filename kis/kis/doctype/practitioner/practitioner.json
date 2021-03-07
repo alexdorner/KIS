@@ -10,21 +10,6 @@
 
 
  "fields": [
-  {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "label": "First Name"
-
-  },
-
-  {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "label": "Last Name"
-
-  },
-
-
 
 
   {
@@ -100,10 +85,10 @@
 
  ],
  "restrict_to_domain": "kis",
- "search_fields": "practitioner_name, mobile_phone, naming_series",
+ "search_fields": "naming_series",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "practitioner_name",
+ "title_field": "naming_series",
  "track_changes": 1
 }
