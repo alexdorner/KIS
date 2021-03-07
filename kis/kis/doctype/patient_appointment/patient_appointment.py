@@ -272,7 +272,7 @@ def get_events(start, end, filters=None):
 	return data
 
 
-
+s
 
 def update_appointment_status():
 	# update the status of appointments daily
