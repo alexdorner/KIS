@@ -13,10 +13,6 @@ class Patient(Document):
 		self.set_mobile()
 
 
-
-
-
-
 	def automobile(self):
 		patient_mobile_by = frappe.db.get_single_value('kis Settings', 'patient_mobile_by')
 		if patient_mobile_by == 'Patient Mobile':
@@ -33,8 +29,6 @@ class Patient(Document):
 			return "{0} - {1}".format(mobile, cstr(count))
 
 		return mobile
-
-
 
 
 
