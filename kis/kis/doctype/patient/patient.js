@@ -12,26 +12,11 @@ frappe.ui.form.on('Patient', {
 		}
 
 
-		if (!frm.doc.__islocal && frappe.user.has_role('Physician')) {
 
-			frm.add_custom_button(__('Patient Encounter'), function () {
-				create_encounter(frm);
-			}, 'Create');
-			frm.toggle_enable(['customer'], 0);
-		}
-	},
+	}
 
 
-	let: create_encounter = function (frm) {
-		if (!frm.doc.name) {
-			frappe.throw(__('Please save the patient first'));
-		}
-		frappe.route_options = {
-			'patient': frm.doc.name,
-		};
-		frappe.new_doc('Patient Encounter');
 
-	},
 })
 
 

@@ -3,7 +3,7 @@
   {
    "hidden": 0,
    "label": "Masters",
-   "links": "[\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Patient\",\n\t\t\"label\": \"Patient\",\n\t\t\"onboard\": 1\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"KIS Practitioner\",\n\t\t\"label\":\"KIS Practitioner\",\n\t\t\"onboard\": 1\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Practitioner Schedule\",\n\t\t\"label\": \"Practitioner Schedule\",\n\t\t\"onboard\": 1\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Medical Department\",\n\t\t\"label\": \"Medical Department\"\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"KIS Service Unit Type\",\n\t\t\"label\": \"Healthcare Service Unit Type\"\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"KIS Service Unit\",\n\t\t\"label\": \"KIS Service Unit\"\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \n\t}\n]"
+   "links": "[\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Patient\",\n\t\t\"label\": \"Patient\",\n\t\t\"onboard\": 1\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Practitioner\",\n\t\t\"label\":\"Practitioner\",\n\t\t\"onboard\": 1\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Practitioner Schedule\",\n\t\t\"label\": \"Practitioner Schedule\",\n\t\t\"onboard\": 1\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \"Medical Department\",\n\t\t\"label\": \"Medical Department\"\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \" Service Unit Type\",\n\t\t\"label\": \" Service Unit Type\"\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \" Service Unit\",\n\t\t\"label\": \" Service Unit\"\n\t},\n\t{\n\t\t\"type\": \"doctype\",\n\t\t\"name\": \n\t}\n]"
   },
   {
    "hidden": 0,
@@ -62,7 +62,7 @@
   {
    "color": "#cef6d1",
    "format": "{} Vacant",
-   "label": "KIS Service Unit",
+   "label": "Service Unit",
    "link_to": "KIS Service Unit",
    "stats_filter": "{\n    \"occupancy_status\": \"Vacant\",\n    \"is_group\": 0,\n    \"company\": [\"like\", \"%\" + frappe.defaults.get_global_default(\"company\") + \"%\"]\n}",
    "type": "DocType"

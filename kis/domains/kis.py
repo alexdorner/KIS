@@ -27,7 +27,7 @@ data = {
 				'insert_after': 'patient', 'read_only': True
 			},
 			{
-				'fieldname': 'ref_practitioner', 'label': 'Referring Practitioner', 'fieldtype': 'Link', 'options': 'kis Practitioner',
+				'fieldname': 'ref_practitioner', 'label': 'Referring Practitioner', 'fieldtype': 'Link', 'options': 'Practitioner',
 				'insert_after': 'customer'
 			}
 		],
