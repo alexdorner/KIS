@@ -6,7 +6,6 @@
  "autoname": "naming_series:",
  "beta": 1,
  "doctype": "DocType",
- "document_type": "Document",
  "engine": "InnoDB",
 
 
@@ -71,7 +70,6 @@
 
  "module": "kis",
  "name": "Practitioner",
- "owner": "Administrator",
  "permissions": [
 {
    "create": 1,

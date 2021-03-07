@@ -44,20 +44,6 @@ class Patient(Document):
 
 
 
-
-	#def add_as_website_user(self):
-	#	if self.email:
-	#		if not frappe.db.exists ('User', self.email):
-	#			user = frappe.get_doc({
-	#				'doctype': 'User',
-	#				'first_name': self.first_name,
-	#				'last_name': self.last_name,
-	#				'email': self.email,
-	#				'user_type': 'Website User'
-	#			})
-	#			user.flags.ignore_permissions = True
-	#			user.add_roles('Patient')
-#
 	def automobile(self):
 		patient_mobile_by = frappe.db.get_single_value('kis Settings', 'patient_mobile_by')
 		if patient_mobile_by == 'Patient Mobile':
@@ -101,16 +87,4 @@ def get_patient_detail(patient):
 	if not patient_dict:
 		frappe.throw(_('Patient not found'))
 
-#
-#def get_timeline_data(doctype, name):
-#	"""Return timeline data from medical records"""
-#	return dict(frappe.db.sql('''
-#		SELECT
-#			unix_timestamp(communication_date), count(*)
-#		FROM
-#			`tabPatient Medical Record`
-#		WHERE
-#			patient=%s
-#			and `communication_date` > date_sub(curdate(), interval 1 year)
-#		GROUP BY communication_date''', name))
-#
+
