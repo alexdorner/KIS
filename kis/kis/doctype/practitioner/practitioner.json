@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_copy": 1,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -26,12 +27,15 @@
   },
   {
    "fieldname": "company",
-   "fieldtype": "Data",
-   "label": "Company"
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company"
   },
 
   {
-   "collapsible": 1,
+
    "fieldname": "appointments",
    "fieldtype": "Section Break",
    "label": "Appointments"
@@ -69,7 +73,30 @@
  "name": "Practitioner",
  "owner": "Administrator",
  "permissions": [
-
+{
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KIS Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
   {
    "create": 1,
    "delete": 1,
@@ -84,6 +111,7 @@
   }
 
  ],
+ "quick_entry": 1,
  "restrict_to_domain": "kis",
  "search_fields": "naming_series",
  "show_name_in_global_search": 1,
