@@ -32,7 +32,7 @@
   }
  ],
  "charts_label": "",
- "creation": "2020-03-02 17:23:17.919682",
+
  "developer_mode_only": 0,
  "disable_user_customization": 0,
  "docstatus": 0,
@@ -42,12 +42,10 @@
  "idx": 0,
  "is_standard": 1,
  "label": "KIS",
- "modified": "2020-11-26 22:09:09.164584",
- "modified_by": "Administrator",
+
  "module": "KIS",
  "name": "KIS",
  "onboarding": "KIS",
- "owner": "Administrator",
  "pin_to_bottom": 0,
  "pin_to_top": 0,
  "restrict_to_domain": "KIS",
@@ -70,8 +68,8 @@
    "type": "DocType"
   },
   {
-   "label": "KIS Practitioner",
-   "link_to": "KIS Practitioner",
+   "label": "Practitioner",
+   "link_to": "Practitioner",
    "type": "DocType"
   }
 

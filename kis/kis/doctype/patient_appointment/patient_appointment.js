@@ -63,22 +63,6 @@ frappe.ui.form.on('Patient Appointment', {
 
 
 
-		if (frm.doc.status == 'Open' || (frm.doc.status == 'Scheduled' && !frm.doc.__islocal)) {
-			frm.add_custom_button(__('Cancel'), function () {
-				update_status(frm, 'Cancelled');
-			});
-			frm.add_custom_button(__('Reschedule'), function () {
-				check_and_set_availability(frm);
-			});
-
-
-			frm.add_custom_button(__('Patient Encounter'), function () {
-				frappe.model.open_mapped_doc({
-					method: 'kis.kis.doctype.patient_appointment.patient_appointment.make_encounter',
-					frm: frm,
-				});
-			}, __('Create'));
-		}
 
 
 	}
@@ -263,93 +247,7 @@ let check_and_set_availability = function(frm) {
 	}
 };
 
-let get_prescribed_procedure = function(frm) {
-	if (frm.doc.patient) {
-		frappe.call({
-			method: 'kis.kis.doctype.patient_appointment.patient_appointment.get_procedure_prescribed',
-			args: {patient: frm.doc.patient},
-			callback: function(r) {
-				if (r.message && r.message.length) {
-					show_procedure_templates(frm, r.message);
-				} else {
-					frappe.msgprint({
-						title: __('Not Found'),
-						message: __('No Prescribed Procedures found for the selected Patient')
-					});
-				}
-			}
-		});
-	} else {
-		frappe.msgprint({
-			title: __('Not Allowed'),
-			message: __('Please select a Patient first')
-		});
-	}
-};
 
-let show_procedure_templates = function(frm, result){
-	let d = new frappe.ui.Dialog({
-		title: __('Prescribed Procedures'),
-		fields: [
-			{
-				fieldtype: 'HTML', fieldname: 'procedure_template'
-			}
-		]
-	});
-	let html_field = d.fields_dict.procedure_template.$wrapper;
-	html_field.empty();
-	$.each(result, function(x, y) {
-		let row = $(repl('<div class="col-xs-12" style="padding-top:12px; text-align:center;" >\
-		<div class="col-xs-5"> %(encounter)s <br> %(consulting_practitioner)s <br> %(encounter_date)s </div>\
-		<div class="col-xs-5"> %(procedure_template)s <br>%(practitioner)s  <br> %(date)s</div>\
-		<div class="col-xs-2">\
-		<a data-name="%(name)s" data-procedure-template="%(procedure_template)s"\
-		data-encounter="%(encounter)s" data-practitioner="%(practitioner)s"\
-		data-date="%(date)s"  data-department="%(department)s">\
-		<button class="btn btn-default btn-xs">Add\
-		</button></a></div></div><div class="col-xs-12"><hr/><div/>', {name:y[0], procedure_template: y[1],
-				encounter:y[2], consulting_practitioner:y[3], encounter_date:y[4],
-				practitioner:y[5]? y[5]:'', date: y[6]? y[6]:'', department: y[7]? y[7]:''})).appendTo(html_field);
-		row.find("a").click(function() {
-			frm.doc.procedure_template = $(this).attr('data-procedure-template');
-			frm.doc.procedure_prescription = $(this).attr('data-name');
-			frm.doc.practitioner = $(this).attr('data-practitioner');
-			frm.doc.appointment_date = $(this).attr('data-date');
-			frm.doc.department = $(this).attr('data-department');
-			refresh_field('procedure_template');
-			refresh_field('procedure_prescription');
-			refresh_field('appointment_date');
-			refresh_field('practitioner');
-			refresh_field('department');
-			d.hide();
-			return false;
-		});
-	});
-	if (!result) {
-		let msg = __('There are no procedure prescribed for ') + frm.doc.patient;
-		$(repl('<div class="col-xs-12" style="padding-top:20px;" >%(msg)s</div></div>', {msg: msg})).appendTo(html_field);
-	}
-	d.show();
-};
-
-
-
-let update_status = function(frm, status){
-	let doc = frm.doc;
-	frappe.confirm(__('Are you sure you want to cancel this appointment?'),
-		function() {
-			frappe.call({
-				method: 'kis.kis.doctype.patient_appointment.patient_appointment.update_status',
-				args: {appointment_id: doc.name, status:status},
-				callback: function(data) {
-					if (!data.exc) {
-						frm.reload_doc();
-					}
-				}
-			});
-		}
-	);
-};
 
 frappe.ui.form.on('Patient Appointment', 'practitioner', function(frm) {
 	if (frm.doc.practitioner) {
