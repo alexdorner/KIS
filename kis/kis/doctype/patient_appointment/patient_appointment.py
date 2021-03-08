@@ -4,13 +4,23 @@
 
 from __future__ import unicode_literals
 from frappe.model.document import Document
-
+import frappe
+import datetime
 
 
 class PatientAppointment(Document):
 	pass
 #def set_appointment_datetime(self):
 #self.appointment_datetime = "%s %s" % (self.appointment_date, self.appointment_time or "00:00:00")
+
+@frappe.whitelist()
+def delete_appointment(self):
+	today = datetime.date.today()
+	appointment = frappe.get_doc('Patient Appointment')
+
+	if appointment.date < today:
+		appointment.delete()
+
 
 
 
