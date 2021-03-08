@@ -11,8 +11,8 @@ app_color = "#e74c3c"
 app_email = ""
 app_license = ""
 
-doc_events = {
-	"Patient": {
-		"after_insert": "kis.api.make_patient_appointment"
-	}
-}
+#doc_events = {
+#	"Patient": {
+#		"after_insert": "kis.api.make_patient_appointment"
+#	}
+#}
