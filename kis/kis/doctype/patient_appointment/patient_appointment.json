@@ -19,7 +19,16 @@
    "set_only_once": 1
   },
   
-
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "search_index": 1,
+   "set_only_once": 1
+  },
 
   {
    "fieldname": "duration",
