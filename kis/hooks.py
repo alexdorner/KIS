@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 from frappe import _
-from . import __version__ as app_version
 
 app_name = "kis"
 app_title = "kis"
