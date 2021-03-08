@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import math
 import frappe
 from frappe import _
-from kis.kis.doctype.kis_settings.healthcare_settings import get_income_account
+
 
 @frappe.whitelist()
 

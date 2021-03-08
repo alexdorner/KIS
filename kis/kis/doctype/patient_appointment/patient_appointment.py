@@ -38,7 +38,7 @@ def make_encounter(source_name, target_doc=None):
 			'field_map': [
 				['appointment', 'name'],
 				['patient', 'patient'],
-				['practitioner', 'practitioner'],
+
 				['medical_department', 'department'],
 				['patient_mobile', 'patient_mobile'],
 
