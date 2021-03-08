@@ -7,6 +7,8 @@ from frappe.model.document import Document
 import frappe
 import datetime
 
+from kis.kis.doctype.patient import patient
+
 
 class PatientAppointment(Document):
 	pass

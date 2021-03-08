@@ -41,14 +41,6 @@
 
   },
 
-  {
-   "fieldname": "Appointment",
-   "fieldtype": "Link",
-   "ignore_user_permissions": 1,
-   "in_standard_filter": 1,
-   "label": "Patient Appointment",
-   "options": "Patient Appointment"
-  },
 
 
 
