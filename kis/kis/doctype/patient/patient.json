@@ -28,8 +28,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Mobile",
-   "options": "Phone"
+   "label": "Mobile"
+
   },
   {
    "bold": 1,
@@ -37,8 +37,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Email",
-   "options": "Email"
+   "label": "Email"
+
   },
 
 
