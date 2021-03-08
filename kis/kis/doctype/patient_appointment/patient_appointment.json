@@ -2,7 +2,7 @@
  "actions": [],
  "allow_copy": 1,
  "allow_import": 1,
- "autoname": "ID:",
+ "autoname": "ID",
  "beta": 1,
  "doctype": "DocType",
  "document_type": "Document",
@@ -12,7 +12,7 @@
 {
    "fieldname": "ID",
    "fieldtype": "Select",
-   "options": "HLC-APP-.YYYY.-",
+
    "label": "Series",
    "set_only_once": 1
   },
@@ -24,7 +24,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Patient",
-   "options": "Patient",
+
    "search_index": 1,
    "set_only_once": 1
   },
@@ -62,7 +62,7 @@
    "label": "Department",
    "options": "Medical Department",
    "read_only": 1,
-    "reqd": 1,
+   "reqd": 1,
    "search_index": 1,
    "set_only_once": 1
   },
