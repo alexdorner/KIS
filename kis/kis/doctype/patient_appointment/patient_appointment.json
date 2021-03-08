@@ -2,19 +2,17 @@
  "actions": [],
  "allow_copy": 1,
  "allow_import": 1,
- "autoname": "naming_series:",
+ "autoname": "ID:",
  "beta": 1,
-
  "doctype": "DocType",
  "document_type": "Document",
  "engine": "InnoDB",
  
  "fields": [
 {
-   "fieldname": "naming_series",
+   "fieldname": "ID",
    "fieldtype": "Select",
    "label": "Series",
-   "options": "HLC-APP-.YYYY.-",
    "set_only_once": 1
   },
   
