@@ -22,31 +22,13 @@ class PatientAppointment(Document):
 @frappe.whitelist()
 def cancel_appointment(appointment_id):
 	appointment = frappe.get_doc('Patient Appointment', appointment_id)
-
+	return appointment
 
 	msg = _('Appointment Cancelled.')
-
 
 	frappe.msgprint(msg)
 
 
-@frappe.whitelist()
-def make_encounter(source_name, target_doc=None):
-	doc = get_mapped_doc('Patient Appointment', source_name, {
-		'Patient Appointment': {
-			'doctype': 'Patient Encounter',
-			'field_map': [
-				['appointment', 'name'],
-				['patient', 'patient'],
-
-				['medical_department', 'department'],
-				['patient_mobile', 'patient_mobile'],
-
-				['company', 'company']
-			]
-		}
-	}, target_doc)
-	return doc
 
 
 

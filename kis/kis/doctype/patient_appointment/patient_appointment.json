@@ -12,6 +12,7 @@
 {
    "fieldname": "ID",
    "fieldtype": "Select",
+   "options": "HLC-APP-.YYYY.-",
    "label": "Series",
    "set_only_once": 1
   },
