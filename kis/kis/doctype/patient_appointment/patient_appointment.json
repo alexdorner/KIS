@@ -49,8 +49,7 @@
    "fieldname": "service_unit",
    "fieldtype": "Link",
    "label": "Service Unit",
-
-
+   "options": "Service Unit",
    "set_only_once": 1,
    "reqd": 1
   },
@@ -62,7 +61,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Department",
-
+   "options": "Medical Department",
    "read_only": 1,
    "reqd": 1,
    "search_index": 1,
@@ -115,7 +114,7 @@
    "in_standard_filter": 1,
    "label": "Company",
    "no_copy": 1,
-
+   "options": "Company",
    "reqd": 1,
    "set_only_once": 1
   }
