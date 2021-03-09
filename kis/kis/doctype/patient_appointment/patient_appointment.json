@@ -2,7 +2,7 @@
  "actions": [],
  "allow_copy": 1,
  "allow_import": 1,
- "autoname": "ID :",
+ "autoname": "fieldname:Appointment",
  "beta": 1,
  "doctype": "DocType",
  "document_type": "Document",
