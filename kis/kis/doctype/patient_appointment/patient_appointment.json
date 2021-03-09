@@ -2,7 +2,7 @@
  "actions": [],
  "allow_copy": 1,
  "allow_import": 1,
- "autoname": "fieldname:Appointment",
+ "autoname": "Appointment",
  "beta": 1,
  "doctype": "DocType",
  "document_type": "Document",
@@ -41,8 +41,8 @@
    "label": "Company",
    "no_copy": 1,
    "options": "Company",
-   "reqd": 1,
-   "set_only_once": 1
+   "reqd": 1
+
   },
 
 {
@@ -50,7 +50,7 @@
    "fieldtype": "Link",
    "label": "Service Unit",
    "options": "Service Unit",
-   "set_only_once": 1,
+
    "reqd": 1
   },
 
@@ -64,8 +64,8 @@
    "options": "Medical Department",
    "read_only": 1,
    "reqd": 1,
-   "search_index": 1,
-   "set_only_once": 1
+   "search_index": 1
+
   },
 
   {
@@ -152,7 +152,7 @@
   }
  ],
  "restrict_to_domain": "kis",
- "search_fields": "ID, department, appointment_date, appointment_time",
+ "search_fields": "Appointment, ID, company,  department, appointment_date, appointment_time",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
