@@ -21,7 +21,7 @@ def delete_appointment(self):
 	appointment = frappe.get_doc('Patient Appointment')
 	return appointment
 
-	if appointment.date < today:
+	if self.appointment_date < date.today:
 
 		msg = _('Appointment NOT bookable.')
 
