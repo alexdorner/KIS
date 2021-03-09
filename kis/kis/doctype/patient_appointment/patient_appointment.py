@@ -15,6 +15,17 @@ class PatientAppointment(Document):
 	def set_appointment_datetime(self):
 		self.appointment_datetime = "%s %s" % (self.appointment_date, self.appointment_time or "00:00:00")
 
+	def booked_appointment(self):
+		appointment = frappe.get_doc('Patient Appointment')
+
+		if self.ID == None:
+			return appointment
+		else:
+
+			msg = _('Appointment NOT bookable.')
+
+			frappe.msgprint(msg)
+
 @frappe.whitelist()
 def delete_appointment(self):
 	today = datetime.date.today()
@@ -36,7 +47,6 @@ def cancel_appointment(appointment_id):
 	msg = _('Appointment Cancelled.')
 
 	frappe.msgprint(msg)
-
 
 
 
