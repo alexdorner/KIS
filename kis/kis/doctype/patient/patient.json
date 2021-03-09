@@ -50,10 +50,7 @@
   }
 
  ],
- "icon": "fa fa-user",
- "image_field": "image",
- "links": [],
- "max_attachments": 50,
+
 
  "module": "kis",
  "name": "Patient",

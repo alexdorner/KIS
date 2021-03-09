@@ -11,30 +11,31 @@ from kis.kis.doctype.patient import patient
 
 
 class PatientAppointment(Document):
-	pass
-#def set_appointment_datetime(self):
-#self.appointment_datetime = "%s %s" % (self.appointment_date, self.appointment_time or "00:00:00")
+
+	def set_appointment_datetime(self):
+		self.appointment_datetime = "%s %s" % (self.appointment_date, self.appointment_time or "00:00:00")
 
 @frappe.whitelist()
 def delete_appointment(self):
 	today = datetime.date.today()
 	appointment = frappe.get_doc('Patient Appointment')
+	return appointment
 
 	if appointment.date < today:
-		appointment.delete()
+
+		msg = _('Appointment NOT bookable.')
+
+		frappe.msgprint(msg)
 
 
+@frappe.whitelist()
+def cancel_appointment(appointment_id):
+	appointment = frappe.get_doc('Patient Appointment', appointment_id)
+	return appointment
 
+	msg = _('Appointment Cancelled.')
 
-
-#@frappe.whitelist()
-#def cancel_appointment(appointment_id):
-#	appointment = frappe.get_doc('Patient Appointment', appointment_id)
-#	return appointment
-
-#	msg = _('Appointment Cancelled.')
-
-#	frappe.msgprint(msg)
+	frappe.msgprint(msg)
 
 
 
