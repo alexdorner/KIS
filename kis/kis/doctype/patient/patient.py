@@ -24,7 +24,7 @@ class Patient(Document):
 
 	def set_phone(mobile):
 		mobile = frappe.get_doc('Patient ', mobile)
-		if not re.match("^[0-9]*$", mobile):
+		if not re.match("^[0-9]{+}*$", mobile):
 			print
 			"Error! Only Numbers allowed!"
 			sys.exit()
