@@ -16,8 +16,10 @@ class Patient(Document):
 	def set_email(email):
 		email = frappe.get_doc('Patient ', email)
 		if not re.match("^[a-z]{@,.}*$", email):
-			print("Error! Wrong value! Please insert your email-address")
-			sys.exit
+			
+			msg = _('Error!!! Please insert your email')
+
+			frappe.msgprint(msg)
 
 
 
@@ -25,13 +27,17 @@ class Patient(Document):
 	def set_phone(mobile):
 		mobile = frappe.get_doc('Patient ', mobile)
 		if not re.match("^[0-9]{+}*$", mobile):
-			print
-			"Error! Only Numbers allowed!"
-			sys.exit()
+
+
+			msg = _('Error!!! Please insert a phone number')
+
+			frappe.msgprint(msg)
 		elif len(mobile) > 12:
-			print
-			"Error! Just Austrian phone numbers"
-			sys.exit()
+
+
+			msg = _('Error!!! Please insert an Austrian phone number ')
+
+			frappe.msgprint(msg)
 
 
 
