@@ -9,15 +9,7 @@
  "engine": "InnoDB",
  
  "fields": [
-{
-   "fieldname": "Appointment",
-   "fieldtype": "Select",
-   "label": "Series",
 
-   "print_hide": 1,
-   "report_hide": 1,
-   "set_only_once": 0
-  },
   
  {
    "fieldname": "ID",
