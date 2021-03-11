@@ -11,3 +11,4 @@ app_email = ""
 app_license = ""
 
 
+app_include_css = "/assets/themes/css/custom.css"
