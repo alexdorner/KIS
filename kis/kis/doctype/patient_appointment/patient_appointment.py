@@ -18,7 +18,7 @@ class PatientAppointment(Document):
 	def booked_appointment(self):
 		appointment = frappe.get_doc('Patient Appointment')
 
-		if self.ID == None:
+		if self.ID == 0:
 			return appointment
 		else:
 
@@ -53,7 +53,7 @@ def get_availability_data(ID,appointment):
 
 	appointment = frappe.get_doc('Patient Appointment', ID)
 
-	if ID.null == 0:
+	if ID.default == 0:
 		return appointment
 	else:
 		return None
